@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="sign_in">Sign in with gmail</string>
+    <string name="gmail">Gmail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="search">Search</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac rutrum orci. Cras sed vehicula ligula. Duis gravida sodales velit, et scelerisque tortor vehicula et. Integer molestie ex at augue ultricies, a posuere erat tempor. Duis justo nibh, tristique nec congue sed, tempor ut tortor. Phasellus eu vulputate urna, sed sagittis augue. Sed accumsan dolor at ipsum maximus interdum. Mauris quis mi laoreet diam pharetra facilisis ac in diam. Phasellus feugiat, justo et pharetra efficitur, enim augue dignissim felis, ac pharetra quam elit lobortis est. Etiam ullamcorper, ex porttitor ultrices vestibulum, neque neque pulvinar orci, vel posuere ligula erat quis risus. Sed pulvinar sagittis pretium. In hac habitasse platea dictumst. Nunc dapibus, ex quis posuere pulvinar, dui felis viverra tortor, sit amet pretium eros purus ac lorem. Donec sed vehicula augue.</string>
+    <string name="english_translation">English Translation</string>
+    <string name="tafseer">Tafseer</string>
+    <string name="see_in_moushaf">See in Moushaf</string>
+    <string name="reader">Reader</string>
+    <string name="tafseer_type">Tafseer Type</string>
+    <string name="choose_a_type">choose a type</string>
+</resources>

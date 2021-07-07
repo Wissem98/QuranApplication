@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/alphabetsFragment">
+
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.ems.myapplication.verses_fragments.WordsFragment"
+        android:label="WordsFragment" >
+        <action
+            android:id="@+id/action_wordsFragment_to_versesFragment"
+            app:destination="@id/versesFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <argument
+            android:name="letter"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/versesFragment"
+        android:name="com.ems.myapplication.verses_fragments.VersesFragment"
+        android:label="VersesFragment" >
+        <action
+            android:id="@+id/action_versesFragment_to_verseDetailsFragment"
+            app:destination="@id/verseDetailsFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <argument
+            android:name="word"
+            app:argType="com.ems.myapplication.models.Word" />
+    </fragment>
+    <fragment
+        android:id="@+id/verseDetailsFragment"
+        android:name="com.ems.myapplication.verses_fragments.VerseDetailsFragment"
+        android:label="VerseDetailsFragment" >
+        <action
+            android:id="@+id/action_verseDetailsFragment_to_moushafFragment"
+            app:destination="@id/moushafFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <argument
+            android:name="verse"
+            app:argType="com.ems.myapplication.models.Verse" />
+    </fragment>
+    <fragment
+        android:id="@+id/moushafFragment"
+        android:name="com.ems.myapplication.verses_fragments.MoushafFragment"
+        android:label="MoushafFragment" >
+        <argument
+            android:name="verse"
+            app:argType="com.ems.myapplication.models.Verse" />
+    </fragment>
+    <fragment
+        android:id="@+id/alphabetsFragment"
+        android:name="com.ems.myapplication.verses_fragments.AlphabetsFragment"
+        android:label="AlphabetsFragment" >
+        <action
+            android:id="@+id/action_alphabetsFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+        <action
+            android:id="@+id/action_alphabetsFragment_to_favoriteVersesFragment"
+            app:destination="@id/favoriteVersesFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+            android:id="@+id/action_alphabetsFragment_to_cloudVersesFragment"
+            app:destination="@id/cloudVersesFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteVersesFragment"
+        android:name="com.ems.myapplication.verses_fragments.FavoriteVersesFragment"
+        android:label="FavoriteVersesFragment" >
+        <action
+            android:id="@+id/action_favoriteVersesFragment_to_favoriteVerseDetails"
+            app:destination="@id/favoriteVerseDetails"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteVerseDetails"
+        android:name="com.ems.myapplication.verses_fragments.FavoriteVerseDetails"
+        android:label="FavoriteVerseDetails" >
+        <argument
+            android:name="verse"
+            app:argType="com.ems.myapplication.models.Verse" />
+    </fragment>
+    <fragment
+        android:id="@+id/cloudVersesFragment"
+        android:name="com.ems.myapplication.verses_fragments.CloudVersesFragment"
+        android:label="CloudVersesFragment" >
+        <action
+            android:id="@+id/action_cloudVersesFragment_to_cloudVerseDetailsFragment"
+            app:destination="@id/cloudVerseDetailsFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cloudVerseDetailsFragment"
+        android:name="com.ems.myapplication.verses_fragments.CloudVerseDetailsFragment"
+        android:label="CloudVerseDetailsFragment" >
+        <argument
+            android:name="verse"
+            app:argType="com.ems.myapplication.models.Verse" />
+        <action
+            android:id="@+id/action_cloudVerseDetailsFragment_to_cloudVerseImageFragment"
+            app:destination="@id/cloudVerseImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cloudVerseImageFragment"
+        android:name="com.ems.myapplication.verses_fragments.CloudVerseImageFragment"
+        android:label="CloudVerseImageFragment" >
+        <argument
+            android:name="verse"
+            app:argType="com.ems.myapplication.models.Verse" />
+    </fragment>
+</navigation>
